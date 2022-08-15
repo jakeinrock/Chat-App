@@ -1,7 +1,7 @@
 from django.contrib.auth import login
 from django.shortcuts import render, redirect
 
-from .forms import SignUpForm, CreateRoomForm
+from .forms import SignUpForm
 
 
 def frontpage(request):
@@ -22,16 +22,3 @@ def signup(request):
         form = SignUpForm()
 
     return render(request, 'core/signup.html', {'form': form})
-
-def createroom(request):
-    if request.method == 'POST':
-        form = CreateRoomForm(request.POST)
-
-        if form.is_valid():
-            form.save()
-
-            return redirect('rooms')
-    else:
-        form = CreateRoomForm()
-
-    return render(request, 'core/createroom.html', {'form': form})

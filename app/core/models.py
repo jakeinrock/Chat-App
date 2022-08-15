@@ -6,6 +6,7 @@ from django.db import models
 
 from django.utils.text import slugify
 
+
 class Room(models.Model):
     name = models.CharField(max_length=25)
     slug = models.SlugField(unique=True)
@@ -17,7 +18,7 @@ class Room(models.Model):
     def __str__(self):
         return self.name
 
-        
+
 class Message(models.Model):
     room = models.ForeignKey(
         Room,
