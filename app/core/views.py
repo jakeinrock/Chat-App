@@ -17,7 +17,7 @@ def signup(request):
 
             login(request, user)
 
-            return redirect('frontpage')
+            return redirect('rooms')
     else:
         form = SignUpForm()
 
