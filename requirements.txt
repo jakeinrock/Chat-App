@@ -3,3 +3,4 @@ channels==3.0.5
 channels-redis==3.4.1
 daphne==3.0.2
 psycopg2>=2.8.6,<2.9
+uwsgi==2.0.20
