@@ -8,7 +8,7 @@
 
 <div class="lg:w-2/4 mx-4 lg:mx-auto p-4 bg-blue-600 rounded-xl">
     <div class="chat-messages space-y-3 text-black" id="chat-messages">
-        {% for m in messages %}<i>{{ m.date_added}}</i><br><b>{{ m.user.username }}</b>: {{ m.content }}<br>{% endfor %}
+        {% for m in messages %}<i>{{ m.date_added}}</i><i> GMT +02</i><br><b>{{ m.user.username }}</b>: {{ m.content }}<br>{% endfor %}
     </div>
 </div>
 
